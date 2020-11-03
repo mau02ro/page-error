@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<section class="errorPage">
+		<div class="errorPage_colum errorPage_colum-left">
+			<h3 class="errorPage_title">404 ERROR</h3>
+			<p class="errorPage_text">Sorry, the page you are looking for cannot be found.</p>
+			<a href="#" class="errorPage_goHome">Go to IBC Homepage</a>
+		</div>
+		<div class="errorPage_colum errorPage_colum-right">
+			<p class="errorPage_text">What are you looking for?</p>
+			<div class="errorPage_grid">
+				<div class="errorPage_card errorPage_card-gray">
+					<img src="assets/target.jpeg" alt="" class="errorPage_card-image">
+					<p class="errorPage_card-text">Tracking</p>
+					<a href="" class="errorPage_btn-secundary">Go Here</a>
+				</div>
+				<div class="errorPage_card errorPage_card-blue">
+					<img src="assets/list.jpeg" alt="" class="errorPage_card-image">
+					<p class="errorPage_card-text">IBC Air AMS Details</p>
+					<a href="" class="errorPage_btn-secundary">Go Here</a>
+				</div>
+				<div class="errorPage_card errorPage_card-blue">
+					<img src="assets/box.jpeg" alt="" class="errorPage_card-image">
+					<p class="errorPage_card-text">IBC Services</p>
+					<a href="" class="errorPage_btn-secundary">Go Here</a>
+				</div>
+				<div class="errorPage_card errorPage_card-gray">
+					<img src="assets/user.jpeg" alt="" class="errorPage_card-image">
+					<p class="errorPage_card-text">Contact Us</p>
+					<a href="" class="errorPage_btn-secundary">Go Here</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<style type="text/css">
+		:root{
+			--blue-space: #427DB9;
+			--blue-dark: #205a93;
+			--blue-ligth: #3A9ACA;
+			--gray-dark: #767676;
+		}
+		html {
+			box-sizing: border-box;
+			font-size: 10px;
+      font-family:sans-serif;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+			margin: 0;
+			padding: 0;
+		}
+		/*----------------------*/
+		/*ErrorPage*/
+		/*----------------------*/
+		.errorPage{
+			display: flex;
+			padding: 70px 120px;
+			width: 100%;
+			min-height: 100vh;
+		}
+		/*----------------------*/
+		/*ErrorPage_Colum*/
+		/*----------------------*/
+		.errorPage_colum{
+			display: flex;
+			flex-flow: column;
+			flex: 1;
+		}
+		/*----------------------*/
+		/*ErrorPage_Colum-left*/
+		/*----------------------*/
+		.errorPage_title{
+			font-size: 5.5rem; 
+			font-weight: lighter;
+			color: var(--blue-space);
+			margin-bottom: 1.5rem;
+		}
+		.errorPage_text{
+			font-size: 2rem;
+			font-weight: lighter;
+			color: var(--gray-dark);
+			margin-bottom: 2.5rem;
+			width: 310px;
+		}
+		.errorPage_goHome{
+			border:0;
+			width: 100%;
+			max-width: 310px;
+			text-decoration: none;
+      color: #fff;
+			text-align: center;
+			font-size: 1.5rem;
+			background: var(--blue-space);        
+      padding: 1rem 0;        
+      border-radius: 5px;
+      box-shadow: 0px 6px 0 var(--blue-dark);
+		}
+		/*----------------------*/
+		/*ErrorPage_Colum-right*/
+		/*----------------------*/
+		.errorPage_grid{
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		}
+		.errorPage_card{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			height: 215px;
+		}
+		.errorPage_card-blue{
+			background: #E8F7FE;
+		}
+		.errorPage_card-image{
+			width: 100%;
+			max-width: 70px;
+		}
+		.errorPage_card-text{
+			margin:  15px 0;
+			font-size: 1.6rem;
+			font-weight: lighter;
+			color: var(--gray-dark);
+		}
+		.errorPage_btn-secundary{
+			background: var(--blue-ligth);
+			text-decoration: none;
+			color: #fff;
+			width: 100%;
+			max-width: 100px;
+			padding: .8rem 0;
+			font-size: 1.3rem;
+		}
+
+		@media screen and (max-width: 1200px) {
+			/*----------------------*/
+			/*ErrorPage*/
+			/*----------------------*/
+			.errorPage{
+				padding: 50px 70px;
+			}
+			/*----------------------*/
+			/*ErrorPage_Colum-left*/
+			/*----------------------*/
+			.errorPage_title{
+				font-size: 4.4rem; 
+				margin-bottom: 1.3rem;
+			}
+			.errorPage_text{
+				font-size: 1.6rem;
+				margin-bottom: 2rem;
+				width: 280px;
+			}
+			.errorPage_goHome{
+				max-width: 250px;
+				font-size: 1.4rem;
+			}
+		}
+		@media screen and (max-width: 960px) {
+			/*----------------------*/
+			/*ErrorPage*/
+			/*----------------------*/
+			.errorPage{
+				flex-flow: column;
+				justify-content: center;
+			}
+			/*----------------------*/
+			/*ErrorPage_Colum*/
+			/*----------------------*/
+			.errorPage_colum{
+				flex: initial;
+				margin: auto;
+			  width: 100%;
+			  max-width: 590px;
+			}
+			.errorPage_colum-left{
+				margin-bottom: 3rem;
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+			}
+			.errorPage_colum-left .errorPage_text{
+				text-align: center;
+				width: 280px;
+			}
+		}
+		@media screen and (max-width: 550px) {
+			.errorPage_grid div{
+				background: #E8F7FE;
+			}
+			.errorPage_grid div:nth-child(2n+1){
+				background: #fff;
+			}
+		}
+		@media screen and (max-width: 450px) {
+			/*----------------------*/
+			/*ErrorPage*/
+			/*----------------------*/
+			.errorPage{
+				padding: 30px;
+			}
+			/*----------------------*/
+			/*ErrorPage_Colum-left*/
+			/*----------------------*/
+			.errorPage_title{
+				font-size: 4rem; 
+				margin-bottom: 1.3rem;
+			}
+		}
+	</style>
+</body>
+</html>
